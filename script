@@ -1,0 +1,13 @@
+NGINX WEB SERVER SCRIPT 
+#!/bin/bash
+sudo yum update -y
+sudo amazon-linux-extras install nginx1 -y 
+sudo systemctl enable nginx
+sudo systemctl start nginx
+
+APACHE WEBSERVER SCRIPT 
+#!/bin/bash
+yum update -y
+yum install -y httpd.x86_64
+systemctl start httpd.service
+systemctl enable httpd.service
