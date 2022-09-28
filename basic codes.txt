@@ -1,0 +1,65 @@
+## Program to generate a random number between 0 and 9
+
+# importing the random module
+import random
+
+print(random.randint(0,9))
+##Taking kilometers input from the user
+kilometers = float(input("Enter value in kilometers: "))
+
+# conversion factor
+conv_fac = 0.621371
+
+# calculate miles
+miles = kilometers * conv_fac
+print('%0.2f kilometers is equal to %0.2f miles' %(kilometers,miles))
+# check if choice is one of the four options
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide(num1, num2))
+        
+        # check if user wants another calculation
+        # break the while loop if answer is no
+        next_calculation = input("Let's do next calculation? (yes/no): ")
+        if next_calculation == "no":
+          break
+    
+    else:
+        print("Invalid Input")
+Run Code
+Output
+## print patterns 
+rows = int(input("Enter number of rows: "))
+
+for i in range(rows):
+    for j in range(i+1):
+        print("* ", end="")
+    print("\n")
+    
+    # Python program to shuffle a deck of card
+
+# importing modules
+import itertools, random
+
+# make a deck of cards
+deck = list(itertools.product(range(1,14),['Spade','Heart','Diamond','Club']))
+
+# shuffle the cards
+random.shuffle(deck)
+
+# draw five cards
+print("You got:")
+for i in range(5):
+   print(deck[i][0], "of", deck[i][1])
